@@ -16,6 +16,7 @@ exports.handler = function(event, context) {
         name: "TODO",
         currency: "EUR",
         billToContact: {
+            country: billingInfo.country,
             firstName: billingInfo.givenName,
             lastName: billingInfo.familyName
         },
