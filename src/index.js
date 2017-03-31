@@ -6,8 +6,8 @@ exports.handler = function(event, context) {
     console.log("Received event:", JSON.stringify(event, null, 2));
     console.log("Received context:", JSON.stringify(context, null, 2));
 
-    const {zuoraApiHost} = event["stage-variables"];
-    const url = `https://${zuoraApiHost}/rest/v1/accounts`;
+    const {zuoraHost} = event["stage-variables"];
+    const url = `https://rest.${zuoraHost}/v1/accounts`;
 
     const {billingInfo, subscriptionPlanId, paymentMethodId} = event["body-json"];
 
